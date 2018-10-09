@@ -337,7 +337,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1262213311037666, guid: 5d29ce3f64d37e849b5371c1fc751226, type: 2}
       propertyPath: m_Name
-      value: Ground (1)
+      value: Right Ground
       objectReference: {fileID: 0}
     - target: {fileID: 4434336264226916, guid: 5d29ce3f64d37e849b5371c1fc751226, type: 2}
       propertyPath: m_LocalScale.x
@@ -391,7 +391,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1262213311037666, guid: 5d29ce3f64d37e849b5371c1fc751226, type: 2}
       propertyPath: m_Name
-      value: Ground
+      value: Left Ground
       objectReference: {fileID: 0}
     - target: {fileID: 4434336264226916, guid: 5d29ce3f64d37e849b5371c1fc751226, type: 2}
       propertyPath: m_LocalScale.x
