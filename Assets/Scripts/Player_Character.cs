@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class Player_Character : MonoBehaviour {
 
@@ -32,6 +34,7 @@ public class Player_Character : MonoBehaviour {
     private float horizontalInput;
     private bool isOnGround;
     private Collider2D[] groundHitDetectionResults = new Collider2D[16];
+    private Checkpoint currentCheckpoint;
 
 
 
@@ -83,5 +86,21 @@ public class Player_Character : MonoBehaviour {
         {
             playerGroundCollider.sharedMaterial = playerStoppingPhysicsMaterial;
         }
+    }
+    public void Respawn()
+    {
+        if(currentCheckpoint == null)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+        else
+        {
+            rb2d.velocity = Vector2.zero;
+            transform.position = currentCheckpoint.transform.position;
+        }
+    }
+    public void SetCurrentCheckpoint(Checkpoint newCurrentCheckpoint)
+    {
+        currentCheckpoint = newCurrentCheckpoint;
     }
 }

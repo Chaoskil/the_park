@@ -9,7 +9,8 @@ public class Hazard : MonoBehaviour {
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            Player_Character player = collision.GetComponent<Player_Character>();
+            player.Respawn();
         }
         else
         {
